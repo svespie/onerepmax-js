@@ -3,162 +3,120 @@
 
   //noinspection JSUnresolvedFunction
   describe("OneRepMax", function () {
+    // all()
     //noinspection JSUnresolvedFunction
-    describe("Invalid Weight Input - Valid Rep Input", function () {
-      // all()
+    describe("all()", function () {
       //noinspection JSUnresolvedFunction
-      it("When null for weight is passed into all(), an empty object should be returned.", function () {
+      it("When null for weight is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
         expect(OneRepMax.all(null, 10)).toEqual({});
       });
         //noinspection JSUnresolvedFunction,JSUnresolvedFunction
-      it("When undefined for weight is passed into all(), an empty object should be returned.", function () {
+      it("When undefined for weight is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
         expect(OneRepMax.all(undefined, 10)).toEqual({});
       });
       //noinspection JSUnresolvedFunction
-      it("When '' for weight is passed into all(), an empty object should be returned.", function () {
+      it("When '' for weight is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
         expect(OneRepMax.all('', 10)).toEqual({});
       });
       //noinspection JSUnresolvedFunction
-      it("When 'random string' for weight is passed into all(), an empty object should be returned.", function () {
+      it("When 'random string' for weight is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
         expect(OneRepMax.all('random string', 10)).toEqual({});
       });
       //noinspection JSUnresolvedFunction
-      it("When true for weight is passed into all(), an empty object should be returned.", function () {
+      it("When true for weight is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
         expect(OneRepMax.all(true, 10)).toEqual({});
       });
       //noinspection JSUnresolvedFunction
-      it("When false for weight is passed into all(), an empty object should be returned.", function () {
+      it("When false for weight is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
-        expect(OneRepMax.all(true, 10)).toEqual({});
+        expect(OneRepMax.all(false, 10)).toEqual({});
       });
       //noinspection JSUnresolvedFunction
-      it("When an empty object for weight is passed into all(), an empty object should be returned.", function () {
+      it("When an empty object for weight is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
         expect(OneRepMax.all({}, 10)).toEqual({});
       });
       //noinspection JSUnresolvedFunction
-      it("When an empty array for weight is passed into all(), an empty object should be returned.", function () {
+      it("When an empty array for weight is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
         expect(OneRepMax.all([], 10)).toEqual({});
       });
       //noinspection JSUnresolvedFunction
-      it("When a populated object for weight is passed into all(), an empty object should be returned.", function () {
+      it("When a populated object for weight is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
         expect(OneRepMax.all({weight: 135, reps: 10 }, 10)).toEqual({});
       });
       //noinspection JSUnresolvedFunction
-      it("When a populated array for weight is passed into all(), an empty object should be returned.", function () {
+      it("When a populated array for weight is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
         expect(OneRepMax.all([135, 10], 10)).toEqual({});
       });
 
-      // average()
       //noinspection JSUnresolvedFunction
-      it("When null for weight is passed into average(), -1 should be returned.", function () {
-          //noinspection JSUnresolvedFunction,JSUnresolvedFunction
-        expect(OneRepMax.average(null, 10)).toEqual(-1);
+      it("When null for reps is passed in, an empty object should be returned.", function () {
+        //noinspection JSUnresolvedFunction
+        expect(OneRepMax.all(135, null)).toEqual({});
+      });
+      //noinspection JSUnresolvedFunction,JSUnresolvedFunction
+      it("When undefined for reps is passed in, an empty object should be returned.", function () {
+        //noinspection JSUnresolvedFunction
+        expect(OneRepMax.all(135, undefined)).toEqual({});
       });
       //noinspection JSUnresolvedFunction
-      it("When undefined for weight is passed into average(), -1 should be returned.", function () {
+      it("When '' for reps is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
-        expect(OneRepMax.average(undefined, 10)).toEqual(-1);
+        expect(OneRepMax.all(135, '')).toEqual({});
       });
       //noinspection JSUnresolvedFunction
-      it("When '' for weight is passed into average(), -1 should be returned.", function () {
+      it("When 'random string' for reps is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
-        expect(OneRepMax.average('', 10)).toEqual(-1);
+        expect(OneRepMax.all(135, 'random string')).toEqual({});
       });
       //noinspection JSUnresolvedFunction
-      it("When 'random string' for weight is passed into average(), -1 should be returned.", function () {
+      it("When true for reps is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
-        expect(OneRepMax.average('random string', 10)).toEqual(-1);
+        expect(OneRepMax.all(135, true)).toEqual({});
       });
       //noinspection JSUnresolvedFunction
-      it("When true for weight is passed into average(), -1 should be returned.", function () {
+      it("When false for reps is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
-        expect(OneRepMax.average(true, 10)).toEqual(-1);
+        expect(OneRepMax.all(135, false)).toEqual({});
       });
       //noinspection JSUnresolvedFunction
-      it("When false for weight is passed into average(), -1 should be returned.", function () {
+      it("When an empty object for reps is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
-        expect(OneRepMax.average(true, 10)).toEqual(-1);
+        expect(OneRepMax.all(135, {})).toEqual({});
       });
       //noinspection JSUnresolvedFunction
-      it("When an empty object for weight is passed into average(), -1 should be returned.", function () {
+      it("When an empty array for reps is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
-        expect(OneRepMax.average({}, 10)).toEqual(-1);
+        expect(OneRepMax.all(135, [])).toEqual({});
       });
       //noinspection JSUnresolvedFunction
-      it("When an empty array for weight is passed into average(), -1 should be returned.", function () {
+      it("When a populated object for reps is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
-        expect(OneRepMax.average([], 10)).toEqual(-1);
+        expect(OneRepMax.all(135, {weight: 135, reps: 10 })).toEqual({});
       });
       //noinspection JSUnresolvedFunction
-      it("When a populated object for weight is passed into average(), -1 should be returned.", function () {
+      it("When a populated array for reps is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
-        expect(OneRepMax.average({weight: 135, reps: 10 }, 10)).toEqual(-1);
-      });
-      //noinspection JSUnresolvedFunction
-      it("When a populated array for weight is passed into average(), -1 should be returned.", function () {
-        //noinspection JSUnresolvedFunction
-        expect(OneRepMax.average([135, 10], 10)).toEqual(-1);
+        expect(OneRepMax.all(135, [135, 10])).toEqual({});
       });
 
-      // brzycki()
       //noinspection JSUnresolvedFunction
-      it("When null for weight is passed into brzycki(), -1 should be returned.", function () {
+      it("When a populated object for weight and reps is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
-        expect(OneRepMax.brzycki(null, 10)).toEqual(-1);
+        expect(OneRepMax.all({weight: 135, reps: 10 })).toEqual({});
       });
       //noinspection JSUnresolvedFunction
-      it("When undefined for weight is passed into brzycki(), -1 should be returned.", function () {
+      it("When a populated array for weight and reps is passed in, an empty object should be returned.", function () {
         //noinspection JSUnresolvedFunction
-        expect(OneRepMax.brzycki(undefined, 10)).toEqual(-1);
-      });
-      //noinspection JSUnresolvedFunction
-      it("When '' for weight is passed into brzycki(), -1 should be returned.", function () {
-        //noinspection JSUnresolvedFunction
-        expect(OneRepMax.brzycki('', 10)).toEqual(-1);
-      });
-      //noinspection JSUnresolvedFunction
-      it("When 'random string' for weight is passed into brzycki(), -1 should be returned.", function () {
-        //noinspection JSUnresolvedFunction
-        expect(OneRepMax.brzycki('random string', 10)).toEqual(-1);
-      });
-      //noinspection JSUnresolvedFunction
-      it("When true for weight is passed into brzycki(), -1 should be returned.", function () {
-        //noinspection JSUnresolvedFunction
-        expect(OneRepMax.brzycki(true, 10)).toEqual(-1);
-      });
-      //noinspection JSUnresolvedFunction
-      it("When false for weight is passed into brzycki(), -1 should be returned.", function () {
-        //noinspection JSUnresolvedFunction
-        expect(OneRepMax.brzycki(true, 10)).toEqual(-1);
-      });
-      //noinspection JSUnresolvedFunction
-      it("When an empty object for weight is passed into brzycki(), -1 should be returned.", function () {
-        //noinspection JSUnresolvedFunction
-        expect(OneRepMax.brzycki({}, 10)).toEqual(-1);
-      });
-      //noinspection JSUnresolvedFunction
-      it("When an empty array for weight is passed into brzycki(), -1 should be returned.", function () {
-        //noinspection JSUnresolvedFunction
-        expect(OneRepMax.brzycki([], 10)).toEqual(-1);
-      });
-      //noinspection JSUnresolvedFunction
-      it("When a populated object for weight is passed into brzycki(), -1 should be returned.", function () {
-        //noinspection JSUnresolvedFunction
-        expect(OneRepMax.brzycki({weight: 135, reps: 10 }, 10)).toEqual(-1);
-      });
-      //noinspection JSUnresolvedFunction
-      it("When a populated array for weight is passed into brzycki(), -1 should be returned.", function () {
-        //noinspection JSUnresolvedFunction
-        expect(OneRepMax.brzycki([135, 10], 10)).toEqual(-1);
+        expect(OneRepMax.all([135, 10])).toEqual({});
       });
     });
   });
