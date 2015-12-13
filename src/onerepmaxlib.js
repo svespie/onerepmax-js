@@ -1,3 +1,5 @@
+var OneRepMax;
+
 (function () {
   'use strict';
 
@@ -64,7 +66,7 @@
     return allOneRepMaxes;
   }
 
-  window.OneRepMax = {
+  OneRepMax = {
     all: function (weight, reps) {
       return all(weight, reps);
     },
