@@ -1,8 +1,6 @@
-var OneRepMax;
+'use strict';
 
-(function () {
-  'use strict';
-
+var OneRepMax = (function () {
   function validateInput(w, r) {
     w = typeof w === 'boolean' ? -1 : Number(w);
     r = typeof r === 'boolean' ? -1 : Number(r);
@@ -66,7 +64,7 @@ var OneRepMax;
     return allOneRepMaxes;
   }
 
-  OneRepMax = {
+  return {
     all: function (weight, reps) {
       return all(weight, reps);
     },
