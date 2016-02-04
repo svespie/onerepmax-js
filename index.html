@@ -36,14 +36,14 @@
 
 <p>A one repetition maximum (often abbreviated 1RM) identifies a weight that a weight lifter can lift only once for a given movement, such as the bench press. This value is often calculated based on strength testing where the lifter lifts a sub-maximal weight for as many repetitions as possible.</p>
 
-<p>It turns out that there are a number of different ways to calculate a 1RM, as depicted on Wikipedia: <a href="https://en.wikipedia.org/wiki/One-repetition_maximum">https://en.wikipedia.org/wiki/One-repetition_maximum</a>. <em>onerepmaxlib-js</em> simply compiles these formulas into a JavaScript library. In addition to the seven formulas listed in the Wikipedia entry, <em>onerepmaxlib-js</em> also provides functionality to average all of the formulas as well as return an object containing the results of all the formulas using a single set of test data.</p>
+<p>It turns out that there are a number of different ways to calculate a 1RM, as depicted on Wikipedia: <a href="https://en.wikipedia.org/wiki/One-repetition_maximum">https://en.wikipedia.org/wiki/One-repetition_maximum</a>. <em>onerepmax-js</em> simply compiles these formulas into a JavaScript library. In addition to the seven formulas listed in the Wikipedia entry, <em>onerepmax-js</em> also provides functionality to average all of the formulas as well as return an object containing the results of all the formulas using a single set of test data.</p>
 
 <h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>To use <em>onerepmaxlib-js</em>, use your favorite means of including the source code into your project or webpage. When the script is executed, a global object called OneRepMax will be created. It is through this object that the calculations will be performed.</p>
+<p>To use <em>onerepmax-js</em>, use your favorite means of including the source code into your project or webpage. When the script is executed, a global object called onerepmax will be created. It is through this object that the calculations will be performed.</p>
 
-<p>OneRepMax contains 7 methods that are direct implementations of a specific 1RM formula (as taken from Wikipedia). The method names are based on the formulas they implement. Each of these direct formula methods take the same input:</p>
+<p>onerepmax contains 7 methods that are direct implementations of a specific 1RM formula (as taken from Wikipedia). The method names are based on the formulas they implement. Each of these direct formula methods take the same input:</p>
 
 <ul>
 <li>
@@ -54,18 +54,18 @@
 
 <p>Here is an example of each direct formula method call:</p>
 
-<pre><code>var orm = OneRepMax.brzycki(135, 10);
-var orm = OneRepMax.epley(135, 10);
-var orm = OneRepMax.lander(135, 10);
-var orm = OneRepMax.lombardi(135, 10);
-var orm = OneRepMax.mayhew(135, 10);
-var orm = OneRepMax.oconner(135, 10);
-var orm = OneRepMax.wathen(135, 10);
+<pre><code>var orm = onerepmax.brzycki(135, 10);
+var orm = onerepmax.epley(135, 10);
+var orm = onerepmax.lander(135, 10);
+var orm = onerepmax.lombardi(135, 10);
+var orm = onerepmax.mayhew(135, 10);
+var orm = onerepmax.oconner(135, 10);
+var orm = onerepmax.wathen(135, 10);
 </code></pre>
 
 <p>When invalid arguments are passed into these methods (see the descriptions for <strong>weight</strong> and <strong>reps</strong> above), the methods will return -1.</p>
 
-<p>OneRepMax contains two additional methods that aim to make the 7 formula methods a bit more useful. These two methods are:</p>
+<p>onerepmax contains two additional methods that aim to make the 7 formula methods a bit more useful. These two methods are:</p>
 
 <ul>
 <li>
@@ -78,8 +78,8 @@ var orm = OneRepMax.wathen(135, 10);
 
 <p>Here are example calls to these two methods:</p>
 
-<pre><code>var orm = OneRepMax.average(135, 10);
-var allOrms = OneRepMax.all(135, 10);
+<pre><code>var orm = onerepmax.average(135, 10);
+var allOrms = onerepmax.all(135, 10);
 </code></pre>
       </section>
     </div>
