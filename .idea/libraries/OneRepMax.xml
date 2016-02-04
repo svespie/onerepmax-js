@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="OneRepMax" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/src" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/src" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
