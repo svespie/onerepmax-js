@@ -12,7 +12,7 @@ var onerepmax = null;
 
   function calculate(w, r, f) {
     if (validateInput(w, r)) {
-      return f(w, r).toFixed(2);
+      return Number(f(w, r).toFixed(2));
     }
     return -1;
   }
@@ -53,14 +53,14 @@ var onerepmax = null;
     var allOneRepMaxes = {};
 
     if (validateInput(w, r)) {
-      all.average = calculate(w, r, average);
-      all.brzycki = calculate(w, r, brzycki);
-      all.epley = calculate(w, r, epley);
-      all.lander = calculate(w, r, lander);
-      all.lombardi = calculate(w, r, lombardi);
-      all.mayhew = calculate(w, r, mayhew);
-      all.oconner = calculate(w, r, oconner);
-      all.wathen = calculate(w, r, wathen);
+      allOneRepMaxes.average = calculate(w, r, average);
+      allOneRepMaxes.brzycki = calculate(w, r, brzycki);
+      allOneRepMaxes.epley = calculate(w, r, epley);
+      allOneRepMaxes.lander = calculate(w, r, lander);
+      allOneRepMaxes.lombardi = calculate(w, r, lombardi);
+      allOneRepMaxes.mayhew = calculate(w, r, mayhew);
+      allOneRepMaxes.oconner = calculate(w, r, oconner);
+      allOneRepMaxes.wathen = calculate(w, r, wathen);
     }
 
     return allOneRepMaxes;
