@@ -1,5 +1,3 @@
-var onerepmax = onerepmax || {};
-
 (function (global) {
   'use strict';
 
@@ -81,7 +79,8 @@ var onerepmax = onerepmax || {};
     };
   }
 
-  global.calculate = function (weight, reps, formula) {
+  global.onerepmax = global.onerepmax || {};
+  global.onerepmax.calculate = function (weight, reps, formula) {
     return calculate(weight, reps, formula);
   };
-}(onerepmax));
+}(this));
