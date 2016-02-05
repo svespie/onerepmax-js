@@ -34,7 +34,7 @@ Here is an example of each available formula option:
 
 When invalid weight and rep values are passed into these methods (see the descriptions for **weight** and **reps** above), the methods will return -1. If an invalid formula is passed in, the calculation will default to the average method.
 
-Along with the 7 formulas from the Wikipedia entry, *onerepmax* contains two special methods that aim to supplement the 7 one rep maximum formulas found on Wikipedia. These two methods are:
+*onerepmax* contains two special methods that aim to supplement the 7 one rep maximum formulas found on Wikipedia. These two methods are:
 
 - **average**: returns an average of the 7 formula methods
 - **all**: returns an object containing the results of the 7 formula methods and the average method.

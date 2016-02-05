@@ -58,8 +58,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3081571">
-              <caret line="21" column="72" selection-start-line="21" selection-start-column="72" selection-end-line="21" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.6933535">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -415,7 +415,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454642165101</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Updated readme to fix some typos, etc.">
+      <created>1454643830326</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1454643830326</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -473,7 +479,8 @@
     <MESSAGE value="Did some renaming to be more JS-like. Many unit tests missing but the existing ones are passing." />
     <MESSAGE value="Added the rest of the unit tests. Re-wrote the individual specifications to better match the typical TDD/BDD style (i.e. &quot;...method should return value when...&quot;)." />
     <MESSAGE value="Re-wrote the library to simplify it's usage and especially its testability. Instead of having several publicly exposed methods, the library has been reduced to a single public entry point. This significantly reduced the amount of input validation required. It should also make the library a bit easier to use in general, however it is a breaking change." />
-    <option name="LAST_COMMIT_MESSAGE" value="Re-wrote the library to simplify it's usage and especially its testability. Instead of having several publicly exposed methods, the library has been reduced to a single public entry point. This significantly reduced the amount of input validation required. It should also make the library a bit easier to use in general, however it is a breaking change." />
+    <MESSAGE value="Updated readme to fix some typos, etc." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated readme to fix some typos, etc." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -668,8 +675,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3081571">
-          <caret line="21" column="72" selection-start-line="21" selection-start-column="72" selection-end-line="21" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.6933535">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
