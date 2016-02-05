@@ -4,10 +4,6 @@
     <list default="true" id="cc3955aa-1120-4f48-b6ad-4f196e3ac306" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/onerepmax.js" afterPath="$PROJECT_DIR$/src/onerepmax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/onerepmax.min.js" afterPath="$PROJECT_DIR$/src/onerepmax.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/SpecRunner.html" afterPath="$PROJECT_DIR$/tests/SpecRunner.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/spec/onerepmax.spec.js" afterPath="$PROJECT_DIR$/tests/spec/onerepmax.spec.js" />
     </list>
     <list id="e9117255-7a47-42f2-a7fd-a6da5bc1fa54" name="New changelist" comment="" />
     <ignored path="onerepmaxlib-js.iws" />
@@ -62,8 +58,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1282052">
-              <caret line="44" column="211" selection-start-line="44" selection-start-column="211" selection-end-line="44" selection-end-column="211" />
+            <state vertical-scroll-proportion="0.3081571">
+              <caret line="21" column="72" selection-start-line="21" selection-start-column="72" selection-end-line="21" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -413,7 +409,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454566169534</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Re-wrote the library to simplify it's usage and especially its testability. Instead of having several publicly exposed methods, the library has been reduced to a single public entry point. This significantly reduced the amount of input validation required. It should also make the library a bit easier to use in general, however it is a breaking change.">
+      <created>1454642165101</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1454642165101</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -431,15 +433,15 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12381454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15005359" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22912206" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22936763" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32762313" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -470,7 +472,8 @@
     <MESSAGE value="Applied the so called core unit tests to the average() method. &quot;Good&quot; input tests are still required and the unit tests for the other methods are also pending." />
     <MESSAGE value="Did some renaming to be more JS-like. Many unit tests missing but the existing ones are passing." />
     <MESSAGE value="Added the rest of the unit tests. Re-wrote the individual specifications to better match the typical TDD/BDD style (i.e. &quot;...method should return value when...&quot;)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the rest of the unit tests. Re-wrote the individual specifications to better match the typical TDD/BDD style (i.e. &quot;...method should return value when...&quot;)." />
+    <MESSAGE value="Re-wrote the library to simplify it's usage and especially its testability. Instead of having several publicly exposed methods, the library has been reduced to a single public entry point. This significantly reduced the amount of input validation required. It should also make the library a bit easier to use in general, however it is a breaking change." />
+    <option name="LAST_COMMIT_MESSAGE" value="Re-wrote the library to simplify it's usage and especially its testability. Instead of having several publicly exposed methods, the library has been reduced to a single public entry point. This significantly reduced the amount of input validation required. It should also make the library a bit easier to use in general, however it is a breaking change." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -665,8 +668,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1282052">
-          <caret line="44" column="211" selection-start-line="44" selection-start-column="211" selection-end-line="44" selection-end-column="211" />
+        <state vertical-scroll-proportion="0.3081571">
+          <caret line="21" column="72" selection-start-line="21" selection-start-column="72" selection-end-line="21" selection-end-column="72" />
           <folding />
         </state>
       </provider>

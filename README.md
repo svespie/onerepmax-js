@@ -6,9 +6,9 @@ It turns out that there are a number of different ways to calculate a 1RM, as de
 
 Usage
 -----
-To use *onerepmax-js*, use your favorite means of including the source code into your project or webpage. When the script is executed, a global object called onerepmax will be created. It is through this object that the calculations will be performed.
+To use *onerepmax*, use your favorite means of including the source code into your project or webpage. When the script is executed, a global object called onerepmax will be created. It is through this object that the calculations will be performed.
   
-onerepmax contains a single public method provides access to direct implementations of a specific 1RM formula (as taken from Wikipedia). A particular formula is targeted using a string value based on the formula name, all lower case, and no punctuation. The public method is called calculate takes the following input:
+*onerepmax* contains a single public method that provides access to direct implementations of a specific 1RM formula (as taken from Wikipedia). A particular formula is targeted using a string value based on the formula name, all lower case, and no punctuation. The public method is called calculate takes the following input:
 
 - **weight**: a number greater than 0 that represents the weight lifted for strength testing. There is no upper bound.
 - **reps**: a number greater than 0 and less than or equal to 10 that represents the number of times the weight was lifted during testing.
@@ -19,22 +19,22 @@ Here is an example of each available formula option:
     var maxes,
         max;
     
-    maxes = onerepmax.calculate(135, 10, 'all');    // returns an object containing the results of all calculations
-    max = onerepmax.calculate(135, 10, 'average');  // returns a numeric result of an average of all formulas
-    max = onerepmax.calculate(135, 10, 'brzycki');  // returns a numeric result of the brzycki formula
-    max = onerepmax.calculate(135, 10, 'epley');    // returns a numeric result of the epley formula
-    max = onerepmax.calculate(135, 10, 'lander');   // returns a numeric result of the lander formula
-    max = onerepmax.calculate(135, 10, 'lombardi'); // returns a numeric result of the lombardi formula
-    max = onerepmax.calculate(135, 10, 'mayhew');   // returns a numeric result of the mayhew formula
-    max = onerepmax.calculate(135, 10, 'oconner');  // returns a numeric result of the oconner formula
-    max = onerepmax.calculate(135, 10, 'wathen');   // returns a numeric result of the wathen formula
+    maxes = onerepmax.calculate(135, 10, 'all');    // returns an object
+    max = onerepmax.calculate(135, 10, 'average');  // returns a number
+    max = onerepmax.calculate(135, 10, 'brzycki');  // returns a number
+    max = onerepmax.calculate(135, 10, 'epley');    // returns a number
+    max = onerepmax.calculate(135, 10, 'lander');   // returns a number
+    max = onerepmax.calculate(135, 10, 'lombardi'); // returns a number
+    max = onerepmax.calculate(135, 10, 'mayhew');   // returns a number
+    max = onerepmax.calculate(135, 10, 'oconner');  // returns a number
+    max = onerepmax.calculate(135, 10, 'wathen');   // returns a number
     
 
-The numeric results are to two decimal places, if a calculation 
+*Note: the numeric results are to two decimal places, if a calculation results in a fractional value.*
 
-When invalid weight and rep values are passed into these methods (see the descriptions for **weight** and **reps** above), the methods will return -1. If an invalid formula is passed in, the default becomes the average method.
+When invalid weight and rep values are passed into these methods (see the descriptions for **weight** and **reps** above), the methods will return -1. If an invalid formula is passed in, the calculation will default to the average method.
 
-onerepmax contains two special methods that aim to supplement the 7 one rep maximum formulas found on Wikipedia. These two methods are:
+Along with the 7 formulas from the Wikipedia entry, *onerepmax* contains two special methods that aim to supplement the 7 one rep maximum formulas found on Wikipedia. These two methods are:
 
 - **average**: returns an average of the 7 formula methods
 - **all**: returns an object containing the results of the 7 formula methods and the average method.
