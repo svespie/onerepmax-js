@@ -8,31 +8,38 @@ Usage
 -----
 To use *onerepmax-js*, use your favorite means of including the source code into your project or webpage. When the script is executed, a global object called onerepmax will be created. It is through this object that the calculations will be performed.
   
-onerepmax contains 7 methods that are direct implementations of a specific 1RM formula (as taken from Wikipedia). The method names are based on the formulas they implement. Each of these direct formula methods take the same input:
+onerepmax contains a single public method provides access to direct implementations of a specific 1RM formula (as taken from Wikipedia). A particular formula is targeted using a string value based on the formula name, all lower case, and no punctuation. The public method is called calculate takes the following input:
 
 - **weight**: a number greater than 0 that represents the weight lifted for strength testing. There is no upper bound.
 - **reps**: a number greater than 0 and less than or equal to 10 that represents the number of times the weight was lifted during testing.
+- **formula**: a string that represents the specific formula to use in the calculation. Available options are 'all', 'average', 'brzycki', 'epley', 'lander', 'lombardi', 'mayhew', 'oconner', and 'wathen'.
 
-Here is an example of each direct formula method call:
+Here is an example of each available formula option:
 
-    var orm = onerepmax.brzycki(135, 10);
-    var orm = onerepmax.epley(135, 10);
-    var orm = onerepmax.lander(135, 10);
-    var orm = onerepmax.lombardi(135, 10);
-    var orm = onerepmax.mayhew(135, 10);
-    var orm = onerepmax.oconner(135, 10);
-    var orm = onerepmax.wathen(135, 10);
+    var maxes,
+        max;
+    
+    maxes = onerepmax.calculate(135, 10, 'all');    // returns an object containing the results of all calculations
+    max = onerepmax.calculate(135, 10, 'average');  // returns a numeric result of an average of all formulas
+    max = onerepmax.calculate(135, 10, 'brzycki');  // returns a numeric result of the brzycki formula
+    max = onerepmax.calculate(135, 10, 'epley');    // returns a numeric result of the epley formula
+    max = onerepmax.calculate(135, 10, 'lander');   // returns a numeric result of the lander formula
+    max = onerepmax.calculate(135, 10, 'lombardi'); // returns a numeric result of the lombardi formula
+    max = onerepmax.calculate(135, 10, 'mayhew');   // returns a numeric result of the mayhew formula
+    max = onerepmax.calculate(135, 10, 'oconner');  // returns a numeric result of the oconner formula
+    max = onerepmax.calculate(135, 10, 'wathen');   // returns a numeric result of the wathen formula
+    
 
-When invalid arguments are passed into these methods (see the descriptions for **weight** and **reps** above), the methods will return -1.
+The numeric results are to two decimal places, if a calculation 
 
-onerepmax contains two additional methods that aim to make the 7 formula methods a bit more useful. These two methods are:
+When invalid weight and rep values are passed into these methods (see the descriptions for **weight** and **reps** above), the methods will return -1. If an invalid formula is passed in, the default becomes the average method.
+
+onerepmax contains two special methods that aim to supplement the 7 one rep maximum formulas found on Wikipedia. These two methods are:
 
 - **average**: returns an average of the 7 formula methods
 - **all**: returns an object containing the results of the 7 formula methods and the average method.
 
-These two methods expect the same parameters as the 7 formula methods. Likewise, when invalid arguments are passed to the average method, -1 will be returned. When invalid arguments are passed to the all method, an empty object will be returned.
 
-Here are example calls to these two methods:
-
-    var orm = onerepmax.average(135, 10);
-    var allOrms = onerepmax.all(135, 10);
+Unit Tests
+-----
+Included with this repo are the unit tests written using Jasmine and the stand alone test runner. The test coverage is not perfect but it provides reasonable confidence that this library will function as needed.

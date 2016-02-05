@@ -1,7 +1,9 @@
-var onerepmax = null;
+var onerepmax = onerepmax || {};
 
-(function () {
+(function (global) {
   'use strict';
+
+  var DECIMAL_PLACES = 2;
 
   function validateInput(w, r) {
     w = typeof w === 'boolean' ? -1 : Number(w);
@@ -10,89 +12,76 @@ var onerepmax = null;
     return (w > 0 && r > 0 && r <= 10);
   }
 
+  function resolveFormula(f) {
+    switch (f) {
+      case 'all': return all;
+      case 'average': return average;
+      case 'brzycki': return brzycki;
+      case 'epley': return epley;
+      case 'lander': return lander;
+      case 'lombardi': return lombardi;
+      case 'mayhew': return mayhew;
+      case 'oconner': return oconner;
+      case 'wathen': return wathen;
+      default: console.warn('onerepmax: formula "' + f + '" is not recognized - substituting average().'); return average;
+    }
+  }
+
   function calculate(w, r, f) {
     if (validateInput(w, r)) {
-      return Number(f(w, r).toFixed(2));
+      return resolveFormula(f)(w,r);
     }
+
+    console.warn('onerepmax: weight and or reps are invalid - { weight: ' + w + ', reps: ' + r + ' }.');
     return -1;
   }
 
   function brzycki(w, r) {
-    return (w * 36) / (37 - r);
+    return Number(((w * 36) / (37 - r)).toFixed(DECIMAL_PLACES));
   }
 
   function epley(w, r) {
-    return w * (1 + (r / 30));
+    return Number((w * (1 + (r / 30))).toFixed(DECIMAL_PLACES));
   }
 
   function lander(w, r) {
-    return (100 * w) / (101.3 - (2.67123 * r));
+    return Number(((100 * w) / (101.3 - (2.67123 * r))).toFixed(DECIMAL_PLACES));
   }
 
   function lombardi(w, r) {
-    return w * Math.pow(r, 0.10);
+    return Number((w * Math.pow(r, 0.10)).toFixed(DECIMAL_PLACES));
   }
 
   function mayhew(w, r) {
-    return (100 * w) / (52.2 + (41.9 * Math.pow(Math.E, (-0.055 * r))));
+    return Number(((100 * w) / (52.2 + (41.9 * Math.pow(Math.E, (-0.055 * r))))).toFixed(DECIMAL_PLACES));
   }
 
   function oconner(w, r) {
-    return w * (1 + (0.025 * r));
+    return Number((w * (1 + (0.025 * r))).toFixed(DECIMAL_PLACES));
   }
 
   function wathen(w, r) {
-    return (100 * w) / (48.8 + (53.8 * Math.pow(Math.E, (-0.075 * r))));
+    return Number(((100 * w) / (48.8 + (53.8 * Math.pow(Math.E, (-0.075 * r))))).toFixed(DECIMAL_PLACES));
   }
 
   function average(w, r) {
-    return (brzycki(w, r) + epley(w, r) + lander(w, r) + lombardi(w, r) + mayhew(w, r) + oconner(w, r) + wathen(w, r)) / 7;
+    return Number(((brzycki(w, r) + epley(w, r) + lander(w, r) + lombardi(w, r) + mayhew(w, r) + oconner(w, r) + wathen(w, r)) / 7).toFixed(DECIMAL_PLACES));
   }
 
   function all(w, r) {
-    var allOneRepMaxes = {};
-
-    if (validateInput(w, r)) {
-      allOneRepMaxes.average = calculate(w, r, average);
-      allOneRepMaxes.brzycki = calculate(w, r, brzycki);
-      allOneRepMaxes.epley = calculate(w, r, epley);
-      allOneRepMaxes.lander = calculate(w, r, lander);
-      allOneRepMaxes.lombardi = calculate(w, r, lombardi);
-      allOneRepMaxes.mayhew = calculate(w, r, mayhew);
-      allOneRepMaxes.oconner = calculate(w, r, oconner);
-      allOneRepMaxes.wathen = calculate(w, r, wathen);
-    }
-
-    return allOneRepMaxes;
+    return {
+      average : average(w,r),
+      brzycki : brzycki(w, r),
+      epley: epley(w, r),
+      lander: lander(w, r),
+      lombardi: lombardi(w, r),
+      mayhew: mayhew(w, r),
+      oconner: oconner(w, r),
+      wathen: wathen(w, r)
+    };
   }
 
-  onerepmax  = {
-    all: function (weight, reps) {
-      return all(weight, reps);
-    },
-    average: function (weight, reps) {
-      return calculate(weight, reps, average);
-    },
-    brzycki: function (weight, reps) {
-      return calculate(weight, reps, brzycki);
-    },
-    epley: function (weight, reps) {
-      return calculate(weight, reps, epley);
-    },
-    lander: function (weight, reps) {
-      return calculate(weight, reps, lander);
-    },
-    lombardi: function (weight, reps) {
-      return calculate(weight, reps, lombardi);
-    },
-    mayhew: function (weight, reps) {
-      return calculate(weight, reps, mayhew);
-    },
-    oconner: function (weight, reps) {
-      return calculate(weight, reps, oconner);
-    },
-    wathen: function (weight, reps) {
-      return calculate(weight, reps, wathen);
-    }
+  global.calculate = function (weight, reps, formula) {
+    return calculate(weight, reps, formula);
   };
-}());
+}(onerepmax));
