@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onerepmax demo</title>
+</head>
+<body>
+    <div>
+        <div id="output"></div>
+    </div>
+
+    <script src="../src/onerepmax.min.js"></script>
+    <script>
+        (function onerepmaxDemo(targetElement, calc) {
+            'use strict';
+
+            var weight = 135,
+                reps = 10,
+                units = 'lbs.',
+                max = calc(weight, reps, 'average');
+
+            targetElement.innerHTML = 'If you perform the bench press with ' + weight + ' ' + units + ' for ' + reps + ' repetitions, then your average one rep maximum is approximately ' + max + ' ' + units;
+        }(document.getElementById('output'), onerepmax.calculate));
+    </script>
+</body>
+</html>

@@ -41,5 +41,5 @@ When invalid weight and rep values are passed into these methods (see the descri
 
 
 Unit Tests
------
+----------
 Included with this repo are the unit tests written using Jasmine and the stand alone test runner. The test coverage is not perfect but it provides reasonable confidence that this library will function as needed.
